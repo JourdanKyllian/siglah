@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "siglah:block/larme_ymir_ore"
+  }
+}
