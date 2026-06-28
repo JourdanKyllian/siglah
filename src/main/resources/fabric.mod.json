@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "siglah",
+  "version": "${version}",
+  "name": "siglah",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/siglah/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "fr.siglah.siglah.client.SiglahDataGenerator"
+    ],
+    "client": [
+      "fr.siglah.siglah.client.SiglahClient"
+    ],
+    "main": [
+      "fr.siglah.siglah.Siglah"
+    ]
+  },
+  "mixins": [
+    "siglah.mixins.json",
+    {
+      "config": "siglah.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
