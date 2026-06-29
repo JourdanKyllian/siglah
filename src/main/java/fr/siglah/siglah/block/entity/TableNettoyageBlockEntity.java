@@ -50,13 +50,14 @@ public class TableNettoyageBlockEntity extends BlockEntity implements NamedScree
     }
 
     // --- Logique du "Nettoyage" ---
-    public static void tick(World world, TableNettoyageBlockEntity entity) {
+    @SuppressWarnings("unused")
+    public static void tick(World world, BlockPos pos, BlockState state, TableNettoyageBlockEntity entity) {
         if (world.isClient) return;
 
         if (hasRecipe(entity)) {
             entity.progress++;
             if (entity.progress >= entity.maxProgress) {
-                craftItem(entity);
+                craftItem(world, entity);
                 entity.resetProgress();
             }
         } else {
@@ -82,13 +83,13 @@ public class TableNettoyageBlockEntity extends BlockEntity implements NamedScree
             ModBlocks.LARME_YMIR_ORE.asItem(), ModItems.LARME_YMIR_ORE_CLEANED
     );
 
-    private static void craftItem(TableNettoyageBlockEntity entity) {
+    private static void craftItem(World world, TableNettoyageBlockEntity entity) {
         ItemStack input = entity.getStack(0);
         Item resultItem = RECIPES.get(input.getItem());
 
         if (resultItem != null) {
             entity.removeStack(0, 1);
-            entity.getStack(1).damage(1, entity.getWorld().getRandom(), null);
+            entity.getStack(1).damage(1, world.getRandom(), null);
 
             ItemStack resultStack = new ItemStack(resultItem, 1);
             if (entity.getStack(2).isEmpty()) {
