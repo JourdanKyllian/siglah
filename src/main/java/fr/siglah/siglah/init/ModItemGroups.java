@@ -27,7 +27,11 @@ public class ModItemGroups {
 
                             // --- Les Items ---
                             entries.add(ModItems.GIVRE_FER_ORE_CLEANED);
+                            entries.add(ModItems.SVARTHARN_ORE_CLEANED);
+                            entries.add(ModItems.LARME_YMIR_ORE_CLEANED);
                             entries.add(ModItems.GIVRE_FER_INGOT);
+                            entries.add(ModItems.SVARTHARN_INGOT);
+                            entries.add(ModItems.LARME_YMIR_INGOT);
                             entries.add(ModItems.PINCEAU_ARCHEO);
                         })
                         .build());

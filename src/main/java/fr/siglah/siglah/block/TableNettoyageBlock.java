@@ -5,6 +5,8 @@ import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.util.ActionResult;
@@ -20,24 +22,27 @@ public class TableNettoyageBlock extends BlockWithEntity {
         super(settings);
     }
 
-    // Définit comment le bloc s'affiche (pour éviter qu'il soit invisible)
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
 
-    // Le cerveau du bloc
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new TableNettoyageBlockEntity(pos, state);
     }
 
-    // clic droit sur le bloc
+    // --- CETTE MÉTHODE EST INDISPENSABLE POUR LE TICK ---
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, fr.siglah.siglah.init.ModBlockEntities.TABLE_NETTOYAGE_BLOCK_ENTITY, TableNettoyageBlockEntity::tick);
+    }
+
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            // Côté serveur : on ouvre l'interface
             NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);

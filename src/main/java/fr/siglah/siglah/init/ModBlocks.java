@@ -16,13 +16,19 @@ public class ModBlocks {
 
     // Déclaration des blocs
     public static final Block GIVRE_FER_ORE = registerBlock("givre_fer_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE).strength(4.0f, 6.0f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)
+                    .strength(3.0f, 6.0f)
+                    .requiresTool()));
 
     public static final Block SVARTHARN_ORE = registerBlock("svartharn_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).strength(10.0f, 10.0f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE)
+                    .strength(5.0f, 10.0f)
+                    .requiresTool()));
 
     public static final Block LARME_YMIR_ORE = registerBlock("larme_ymir_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).strength(1.5f, 3.0f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE)
+                    .strength(1.5f, 3.0f)
+                    .requiresTool()));
 
     public static final Block TABLE_NETTOYAGE = registerBlock("table_nettoyage",
             new TableNettoyageBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(2.5f)));

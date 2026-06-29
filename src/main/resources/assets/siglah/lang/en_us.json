@@ -5,10 +5,15 @@
   "block.siglah.svartharn_ore": "Minerai de Svartharn",
   "block.siglah.larme_ymir_ore": "Minerai de Larme d'Ymir",
 
-
   "item.siglah.givre_fer_ore_cleaned": "Minerai de Givre-Fer nettoyé",
+  "item.siglah.svartharn_ore_cleaned": "Minerai de Svartharn nettoyé",
+  "item.siglah.larme_ymir_ore_cleaned": "Minerai de Larme d'Ymir nettoyé",
 
   "item.siglah.givre_fer_ingot": "Lingot de Givre-Fer",
+  "item.siglah.svartharn_ingot": "Lingot de Svartharn",
+  "item.siglah.larme_ymir_ingot": "Lingot de Larme d'Ymir",
+
+  "item.siglah.givre_fer_pickaxe": "Pioche en Givre-Fer",
 
   "item.siglah.pinceau_archeo": "Pinceau d'Archéologue",
   "block.siglah.table_nettoyage": "Table de Nettoyage"

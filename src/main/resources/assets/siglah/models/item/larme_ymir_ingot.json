@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "siglah:item/givre_fer_ore_cleaned"
+    "layer0": "siglah:item/larme_ymir_ingot"
   }
 }
