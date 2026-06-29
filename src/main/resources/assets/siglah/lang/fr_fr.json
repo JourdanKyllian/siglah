@@ -1,6 +1,15 @@
 {
   "itemgroup.siglah.siglah_group": "Siglah: Artefacts",
+
   "block.siglah.givre_fer_ore": "Minerai de Givre-Fer",
   "block.siglah.svartharn_ore": "Minerai de Svartharn",
-  "block.siglah.larme_ymir_ore": "Minerai de Larme d'Ymir"
+  "block.siglah.larme_ymir_ore": "Minerai de Larme d'Ymir",
+
+
+  "item.siglah.givre_fer_ore_cleaned": "Minerai de Givre-Fer nettoyé",
+
+  "item.siglah.givre_fer_ingot": "Lingot de Givre-Fer",
+
+  "item.siglah.pinceau_archeo": "Pinceau d'Archéologue",
+  "block.siglah.table_nettoyage": "Table de Nettoyage"
 }

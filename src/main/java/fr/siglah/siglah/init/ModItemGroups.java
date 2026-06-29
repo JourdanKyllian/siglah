@@ -18,11 +18,18 @@ public class ModItemGroups {
                 new Identifier(Siglah.MOD_ID, "siglah_group"),
                 FabricItemGroup.builder()
                         .displayName(Text.translatable("itemgroup.siglah.siglah_group"))
-                        .icon(() -> new ItemStack(ModBlocks.GIVRE_FER_ORE != null ? ModBlocks.GIVRE_FER_ORE : Blocks.IRON_ORE))
+                        .icon(() -> new ItemStack(ModBlocks.GIVRE_FER_ORE))
                         .entries((context, entries) -> {
-                            if (ModBlocks.GIVRE_FER_ORE != null) entries.add(ModBlocks.GIVRE_FER_ORE);
-                            if (ModBlocks.SVARTHARN_ORE != null) entries.add(ModBlocks.SVARTHARN_ORE);
-                            if (ModBlocks.LARME_YMIR_ORE != null) entries.add(ModBlocks.LARME_YMIR_ORE);
+                            // --- Les Blocs ---
+                            entries.add(ModBlocks.GIVRE_FER_ORE);
+                            entries.add(ModBlocks.SVARTHARN_ORE);
+                            entries.add(ModBlocks.LARME_YMIR_ORE);
+                            entries.add(ModBlocks.TABLE_NETTOYAGE);
+
+                            // --- Les Items ---
+                            entries.add(ModItems.GIVRE_FER_ORE_CLEANED);
+                            entries.add(ModItems.GIVRE_FER_INGOT);
+                            entries.add(ModItems.PINCEAU_ARCHEO);
                         })
                         .build());
     }

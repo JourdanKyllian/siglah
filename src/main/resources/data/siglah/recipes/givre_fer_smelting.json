@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": { "item": "siglah:givre_fer_ore" },
+  "result": "siglah:givre_fer_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

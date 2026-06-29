@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "id": "minecraft:air",
+    "count": 0
+  }
+}

@@ -1,8 +1,6 @@
 package fr.siglah.siglah;
 
-import fr.siglah.siglah.init.ModBlocks;
-import fr.siglah.siglah.init.ModItemGroups;
-import fr.siglah.siglah.init.ModItems;
+import fr.siglah.siglah.init.*;
 import net.fabricmc.api.ModInitializer;
 
 public class Siglah implements ModInitializer {
@@ -12,6 +10,10 @@ public class Siglah implements ModInitializer {
     public void onInitialize() {
         ModBlocks.registerModBlocks(); // Enregistre les blocs
         ModItems.registerModItems();   // Enregistre les items
+
+        ModBlockEntities.registerBlockEntities();
+        ModScreenHandlers.registerScreenHandlers();
+
         ModItemGroups.registerItemGroups(); // Enregistre l'onglet
         System.out.println("Les métaux de Siglah sont forgés !");
     }
