@@ -33,6 +33,7 @@ public class ModItemGroups {
                             entries.add(ModItems.SVARTHARN_INGOT);
                             entries.add(ModItems.LARME_YMIR_INGOT);
                             entries.add(ModItems.PINCEAU_ARCHEO);
+                            entries.add(ModItems.GIVRE_FER_PICKAXE);
                         })
                         .build());
     }

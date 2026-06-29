@@ -50,7 +50,7 @@ public class TableNettoyageBlockEntity extends BlockEntity implements NamedScree
     }
 
     // --- Logique du "Nettoyage" ---
-    public static void tick(World world, BlockPos pos, BlockState state, TableNettoyageBlockEntity entity) {
+    public static void tick(World world, TableNettoyageBlockEntity entity) {
         if (world.isClient) return;
 
         if (hasRecipe(entity)) {
