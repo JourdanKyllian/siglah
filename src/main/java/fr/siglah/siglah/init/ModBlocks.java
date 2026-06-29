@@ -34,6 +34,7 @@ public class ModBlocks {
     }
 
     // Enregistre l'item (pour pouvoir le tenir en main)
+    @SuppressWarnings("unused")
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(Siglah.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));

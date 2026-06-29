@@ -18,9 +18,6 @@
     ],
     "main": [
       "fr.siglah.siglah.Siglah"
-    ],
-    "client": [
-      "fr.siglah.siglah.client.SiglahClient"
     ]
   },
   "mixins": [

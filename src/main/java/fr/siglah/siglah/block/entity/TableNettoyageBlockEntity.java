@@ -23,7 +23,7 @@ public class TableNettoyageBlockEntity extends BlockEntity implements NamedScree
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
-        public int get(int index) { return index == 0 ? 0 : 0; }
+        public int get(int index) { return 0; }
         public void set(int index, int value) { }
         public int size() { return 2; }
     };

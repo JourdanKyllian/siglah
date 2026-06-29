@@ -2,7 +2,6 @@ package fr.siglah.siglah.init;
 
 import fr.siglah.siglah.Siglah;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
